@@ -92,7 +92,15 @@
     </script>
 	<script>
 		$(".alpha").load("alpha.html");
-		$(".bravo").load("bravo.html");
+		$(window).on('scroll', function(){
+			console.log('scrolling');
+			if ($(this).scrollTop() >= 500) {
+				$(".bravo").load("bravo.html");		
+				
+			}
+		});
+		// scrollTop();
+		
 	</script>
 
 	</body>
